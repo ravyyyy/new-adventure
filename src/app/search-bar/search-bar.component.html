@@ -1,0 +1,4 @@
+<input type="search" [(ngModel)]="searchTerm" (input)="search(searchTerm)" placeholder="Select your city">
+<div class="dropdown" *ngIf="searchResults.length > 0">
+    <li *ngFor="let item of searchResults" (click)="select(item)">{{ item }}</li>
+</div>
