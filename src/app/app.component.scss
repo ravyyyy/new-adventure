@@ -61,30 +61,21 @@
     flex-direction: column;
 }
 
-.select-city-container .search-bar {
-    position: relative;
-    width: 15%;
-    margin-left: -50px;
-}
-
 .services-container {
     left: 50%;
     position: absolute;
     transform: translate(-50%, 50%);
+    text-align: center;
 }
 
 .services-container h2 {
     color: rgb(111, 235, 111);
-    position: relative;
     margin-bottom: 5px;
     margin-top: 5px;
 }
 
-.services-container hr{
-    position: relative;
-    right: 50%;
+.services-container hr {
     border: none;
     border-top: 1px solid rgb(187, 187, 187);
-    width: 200%;
-    margin: 0 auto;
+    width: 75%;
 }

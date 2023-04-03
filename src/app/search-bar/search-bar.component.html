@@ -1,4 +1,18 @@
-<input type="search" [(ngModel)]="searchTerm" (input)="search(searchTerm)" placeholder="Select your city">
+<!--<input type="search" [(ngModel)]="searchTerm" (input)="search(searchTerm)" placeholder="Select your city">
 <div class="dropdown" *ngIf="searchResults.length > 0">
-    <li *ngFor="let item of searchResults" (click)="select(item)">{{ item }}</li>
-</div>
+    <ul>
+        <li *ngFor="let item of searchResults">
+          {{item}}
+        </li>
+      </ul>
+</div>-->
+<mat-form-field>
+    <mat-select [formControl]="cityServerSideControl" placeholder="City">
+        <mat-option>
+            <ngx-mat-select-search [formControl]="cityServerSideFilteringControl" [placeholderLabel]="'Search city'" [searching]="searching" [noEntriesFoundLabel]="'No city has been found'"></ngx-mat-select-search>
+        </mat-option>
+        <mat-option *ngFor="let city of filteredServerSideCities | async" [value]="city">
+            {{city.name}}
+        </mat-option>
+    </mat-select>
+</mat-form-field>
