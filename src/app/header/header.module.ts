@@ -1,37 +1,35 @@
-import { Input, NgModule } from '@angular/core';
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { TopComponent } from './top/top.component';
+import { SearchBarComponent } from './search-bar/search-bar.component';
+
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { NgxMatSelectSearchModule } from 'ngx-mat-select-search';
 import { MatSelectModule } from '@angular/material/select';
-
-import { AppComponent } from './app.component';
-import { ServicesComponent } from './services/services.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { Routes } from '@angular/router';
-import { HeaderModule } from './header/header.module';
 
-const routes: Routes = [
-  {path:'', loadChildren: () => import('./header/header.module').then(m => m.HeaderModule)}
-];
+
 
 @NgModule({
   declarations: [
-    AppComponent,
-    ServicesComponent
+    TopComponent,
+    SearchBarComponent
   ],
   imports: [
+    CommonModule,
     BrowserModule,
     FormsModule,
     BrowserAnimationsModule,
     MatFormFieldModule,
     NgxMatSelectSearchModule,
     MatSelectModule,
-    ReactiveFormsModule,
-    HeaderModule
+    ReactiveFormsModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  exports: [
+    TopComponent,
+    SearchBarComponent
+  ]
 })
-export class AppModule {
-}
+export class HeaderModule { }

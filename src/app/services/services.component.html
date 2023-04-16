@@ -1,5 +1,20 @@
-<div *ngFor="let service of serviceList">
-    <h2>{{service.bigTitle}}</h2>
-    <h3>{{service.smallTitle}}</h3>
-    <p>{{service.description}}</p>
+<div class="services-container">
+    <h2 class="title">OUR SERVICES</h2>
+    <hr>
+    <div class="services">
+        <div class="left">
+            <div class="service" *ngFor="let service of serviceList.slice(0, 2)">
+                <h2>{{service.bigTitle}}</h2>
+                <h3>{{service.smallTitle}}</h3>
+                <p>{{service.description}}</p>
+            </div>
+        </div>
+        <div class="right">
+            <div class="service" *ngFor="let service of serviceList.slice(2)">
+                <h2>{{service.bigTitle}}</h2>
+                <h3>{{service.smallTitle}}</h3>
+                <p>{{service.description}}</p>
+            </div>
+        </div>
+    </div>
 </div>
