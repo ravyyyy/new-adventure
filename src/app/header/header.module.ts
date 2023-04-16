@@ -9,13 +9,15 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { NgxMatSelectSearchModule } from 'ngx-mat-select-search';
 import { MatSelectModule } from '@angular/material/select';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MostPopularComponent } from './most-popular/most-popular.component';
 
 
 
 @NgModule({
   declarations: [
     TopComponent,
-    SearchBarComponent
+    SearchBarComponent,
+    MostPopularComponent
   ],
   imports: [
     CommonModule,
@@ -29,7 +31,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   ],
   exports: [
     TopComponent,
-    SearchBarComponent
+    SearchBarComponent,
+    MostPopularComponent
   ]
 })
 export class HeaderModule { }

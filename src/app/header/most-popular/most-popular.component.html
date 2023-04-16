@@ -1,0 +1,13 @@
+<div class="main">
+    <h3 class="title">MOST POPULAR</h3>
+    <div class="city-list">
+        <div class="card" *ngFor="let city of cities">
+            <img [src]="city.image" alt="City image" class="card-image">
+            <div class="card-content">
+                <h2 class="card-title">{{city.name}}</h2>
+                <p class="card-description">{{city.description}}</p>
+                <button class="card-button" (click)="visiting(city)">VISIT NOW</button>
+            </div>
+        </div>
+    </div>
+</div>
